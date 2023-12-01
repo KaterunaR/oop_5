@@ -81,13 +81,15 @@ int main() {
     cin >> c;
 
     cout << "Лінійне:" << endl;
-    LinearEquation linearEquation(a, b);
+    BASE* linearEquation = new linearEquation(a, b);
     linearEquation.solve();
-
+    delete linearEquation;
+    
     cout << endl;
     cout << "Квадратичне:" << endl;
-    QuadraticEquation quadraticEquation(a, b, c);
+    BASE* quadraticEquation = new quadraticEquation(a, b, c);
     quadraticEquation.solve();
+    delete quadraticEquation;
 
     return 0;
 }
